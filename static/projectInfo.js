@@ -16,19 +16,34 @@ const projectInfo = [
   },
   {
     name: 'Tic Tac Toe',
-    image: 'https://bit.ly/2APVTAo',
-    text: "A Tic Tac Toe game that you can play against the computer or another player",
+    image: 'https://bit.ly/2yYfblz',
+    text: "A Tic Tac Toe game that you can play against the computer or another player.",
     tools: ['JavaScript', 'JQuery', 'HTML'],
-    href: 'https://bit.ly/2yYfblz',
+    href: 'https://valeshan.github.io/TicTacToe-master-ex-exp/',
     github: 'https://github.com/valeshan/TicTacToe-master-ex-exp'
   },
   {
+    name: 'Interactive Form',
+    image: 'https://bit.ly/2zALaYG',
+    text: "An interactive registration form for an event. Uses conditional statements and JQuery to create interactivity.",
+    tools: ['JavaScript', 'JQuery', 'HTML'],
+    href: 'https://valeshan.github.io/interactive-form-v1/',
+    github: 'https://github.com/valeshan/interactive-form-v1'
+  },
+  {
+    name: 'Library Manager',
+    image: 'https://bit.ly/2RCQQIW',
+    text: "This is a library manager that manages a SQL database using Sequelize. User can create, read and update database for books, patrons and loans.",
+    tools: ['JavaScript', 'SQL', 'Express', 'JQuery'],
+    github: 'https://github.com/valeshan/library_manager'
+  },
+  {
     name: 'Portfolio site',
-    image: 'https://bit.ly/2APVTAo',
-    text: "A little obvious and expected, but it's live!",
+    image: '',
+    text: "A little obvious and expected, but it's true!",
     tools: ['JavaScript', 'Vue', 'NuxtJS', 'Bootstrap'],
     href: '#',
-    github: 'https://github.com/valeshan/TicTacToe-master-ex-exp'
+    github: 'https://github.com/valeshan/My-portfolio-site'
   },
 ]
 

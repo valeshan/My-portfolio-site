@@ -9,14 +9,31 @@ h1{
   text-transform: uppercase;
 }
 
-/* .container{
-  display: grid;
-  background: rgb(0,219,146);
-  padding: 1em;
-  bottom: 0px;
-  width: 100%;
-  left: 0px;
-} */
+hr{
+  margin-left: 37em;
+  width: 20%;
+  color: rgb(0,219,146);
+}
+
+.jumbotron{
+  padding-bottom: 1em;
+}
+
+.container{
+  margin-bottom: 5em;
+}
+
+.jumbo-header{
+  background-color:white;
+  color: rgb(0,219,146);
+  text-align: center;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .subheading{
   font-size: 1.5em;

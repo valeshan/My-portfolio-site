@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-const _27119952 = () => import('../pages/projects.vue' /* webpackChunkName: "pages/projects" */).then(m => m.default || m)
+const _da2b718a = () => import('../pages/portfolio.vue' /* webpackChunkName: "pages/portfolio" */).then(m => m.default || m)
 const _94d7565a = () => import('../pages/contact.vue' /* webpackChunkName: "pages/contact" */).then(m => m.default || m)
 const _8804bf00 = () => import('../pages/about.vue' /* webpackChunkName: "pages/about" */).then(m => m.default || m)
 const _48950976 = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
@@ -66,9 +66,9 @@ export function createRouter () {
     scrollBehavior,
     routes: [
 		{
-			path: "/projects",
-			component: _27119952,
-			name: "projects"
+			path: "/portfolio",
+			component: _da2b718a,
+			name: "portfolio"
 		},
 		{
 			path: "/contact",
