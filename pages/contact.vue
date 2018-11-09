@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section class="hero-image">
       <b-container class="mw-100 (max-width: 100%;)">
         <b-jumbotron class="jumbo-header" header="Contact Me" >
         </b-jumbotron>

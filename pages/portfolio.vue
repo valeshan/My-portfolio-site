@@ -1,5 +1,5 @@
 <template>
-  <section >
+  <section class="hero-image">
     <b-container class="container project-container mw-100 (max-width: 100%;)">
       <b-jumbotron class="jumbo-header" header="Portfolio" lead="A few of my projects - 2018" >
       </b-jumbotron>
@@ -10,13 +10,12 @@
           <div class="card-body">
             <h5 class="card-title">{{project.name}}</h5>
             <p class="card-text">{{project.text}}</p>
-            <a v-if="project.href"  :href="project.href" class="btn outline-primary" target="_blank">Live site</a>
-            <a v-if="project.github"  :href="project.github" class="btn outline-danger" target="_blank">Repo</a>
-            <div class="collapse" id="collapseExample">
-              <div class="card card-body">
-                {{project.text}}
-              </div>
-            </div>
+            <ul class="row tools">
+              <li class="col-md-3 tool" :key="index" v-for="(tool, index) in project.tools">{{tool}}</li>
+            </ul>
+            <br>
+            <a v-if="project.href"  :href="project.href" class="btn link-btn" target="_blank">Live site</a>
+            <a v-if="project.github"  :href="project.github" class="btn link-btn" target="_blank">Repo</a>
           </div>
       </div>
     </div>
@@ -52,14 +51,48 @@ export default {
   padding-right: 0;
 }
 
-.jumbo-header{
-  background-color:white;
-  color: rgb(0,219,146);
+ul{
+  list-style: none;
+}
+
+.tools{
+  margin-left: -2.5em;
+}
+
+.tool{
+  text-decoration: none;
   text-align: center;
+  color: rgb(0, 139, 219);
+  background-color: white;
+  border: solid white;
+  padding: 3px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.link-btn{
+  color: white;
+  border: solid white;
+  margin-top: -1em;
+}
+
+.link-btn:hover{
+  color: white;
+  border: solid rgb(0,219,146);
 }
 
 .card-title{
   font-weight: bold;
+  color:white;
+}
+
+.card-text{
+  color: white;
+  font-weight: 500;
+}
+
+.card-body{
+  background-color: rgb(0, 168, 219);
 }
 
 img{

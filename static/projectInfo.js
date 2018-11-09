@@ -39,10 +39,9 @@ const projectInfo = [
   },
   {
     name: 'Portfolio site',
-    image: '',
-    text: "A little obvious and expected, but it's true!",
+    image: 'https://bit.ly/2JOGDGy',
+    text: "A little obvious and expected, but it's true! It was a completely fun experience creating this site, NuxtJS is incredible!",
     tools: ['JavaScript', 'Vue', 'NuxtJS', 'Bootstrap'],
-    href: '#',
     github: 'https://github.com/valeshan/My-portfolio-site'
   },
 ]

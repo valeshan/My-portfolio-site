@@ -1,6 +1,6 @@
 <template>
-  <section>
-    <b-container class="container home-container mw-100 (max-width: 100%;) text-center">
+  <section class="hero-image">
+    <b-container class="container mw-100 (max-width: 100%;) text-center">
       <b-jumbotron class="jumbo-header" header="Developer for hire." lead="Full Stack Developer / Web Developer" >
       </b-jumbotron>
     </b-container>
@@ -11,7 +11,7 @@
           I can develop simple static sites, single page apps (SPAs) and full-stack web apps w/ backend.
         </p>
         <br>
-        <p>
+        <p style="margin-bottom: 4em;">
           Here are some of the languages, libraries and frameworks I can work with:
         </p>
         <img class="icon" :key="index" v-for="(image, index) in images" :src="image" />
@@ -19,7 +19,7 @@
       <br>
       <div class="projects-section">
         <p>You can look at examples of all the above tools in action in my portfolio page!</p>
-        <b-nav class="center mx-auto">
+        <b-nav class="project-button">
           <b-nav-item><nuxt-link class="project-link" to="portfolio">My Portfolio</nuxt-link></b-nav-item>
         </b-nav>
       </div>
@@ -62,10 +62,24 @@ export default {
     width: 7em;
     padding: 1em;
   }
-  
+
+  .jumbotron{
+    background: none;
+  }
+
+  .project-button{
+    justify-self: center;
+  }
+
+  .projects-section{
+    display: grid;
+    margin-top: 4em;
+  }
   .project-link{
-    background-color: blue;
-    color: white
+    background-color: white;
+    color: rgb(0,219,146);
+    border: solid rgb(0,219,146); 
+    border-radius: 3px;
   }
 
   .project-link:hover{
@@ -73,6 +87,8 @@ export default {
     color: white;
     background-color: rgb(0,219,146);
   }
+
+
   /* .header-section{
     background-color: rgb(204, 140, 140);
   }
