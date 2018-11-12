@@ -13,13 +13,15 @@ export default {
 
 <style>
   .footer{
-    background: rgb(0,219,146);
     padding: 1em;
+    height: 4em;
     display: grid;
     grid-template-columns: repeat(2,auto);
+    background-image: linear-gradient(to right, #0099ff, #66ffcc);;
     width: 100%;
     left: 0px;
   }
+
   span{
     padding: 1em 2em;
     display: inline;

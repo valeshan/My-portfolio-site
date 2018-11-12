@@ -5,14 +5,19 @@ import '../node_modules/bootstrap/dist/css/bootstrap.css'
 
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
 
+import '../node_modules/bootstrap/dist/css/bootstrap.css'
+
+import '../node_modules/bootstrap/dist/css/bootstrap.css'
+
 import '../assets/css/main.css'
 
 
 import _6f6c098b from '../layouts/default.vue'
 import _d7307efc from '../layouts/partials/footer.vue'
+import _62396dbd from '../layouts/partials/homeNav.vue'
 import _230840c8 from '../layouts/partials/nav.vue'
 
-const layouts = { "_default": _6f6c098b,"_partials/footer": _d7307efc,"_partials/nav": _230840c8 }
+const layouts = { "_default": _6f6c098b,"_partials/footer": _d7307efc,"_partials/homeNav": _62396dbd,"_partials/nav": _230840c8 }
 
 
 

@@ -1,33 +1,36 @@
 <template>
-  <section class="hero-image">
-    <b-container class="container mw-100 (max-width: 100%;) text-center">
-      <b-jumbotron class="jumbo-header" header="Developer for hire." lead="Full Stack Developer / Web Developer" >
-      </b-jumbotron>
-    </b-container>
+  <section class="wallpaper home-page">
+      <b-jumbotron class="hero-jumbo text-center">
+        <img :src="logoImage" alt="logo" style="height: 10em" fluid />
+        <div style="color: white; padding-top: 1em;">
+          <h3>Valeshan Naidoo</h3>
+          <p>Full Stack Developer / Web Developer</p>
+        </div>
+        <b-nav class="project-button row">
+          <b-nav-item class="mx-auto"><nuxt-link class="project-link" to="portfolio">My Portfolio</nuxt-link></b-nav-item>
+        </b-nav>
+        <b-container>
+          <div class="projects-section">
+            <p>
+              Simple static sites, single page apps (SPAs) and full-stack web apps w/ backend.
+            </p>
+          </div>
+        </b-container>
+      </b-jumbotron> 
+    <homeNav class="index-nav"/>
     <br>
     <div class="container">
       <div class="summary-section">
-        <p>
-          I can develop simple static sites, single page apps (SPAs) and full-stack web apps w/ backend.
-        </p>
-        <br>
-        <p style="margin-bottom: 4em;">
-          Here are some of the languages, libraries and frameworks I can work with:
-        </p>
-        <img class="icon" :key="index" v-for="(image, index) in images" :src="image" />
+        <img class="icon" :key="index" v-for="(image, index) in images" :src="image"/>
       </div>
       <br>
-      <div class="projects-section">
-        <p>You can look at examples of all the above tools in action in my portfolio page!</p>
-        <b-nav class="project-button">
-          <b-nav-item><nuxt-link class="project-link" to="portfolio">My Portfolio</nuxt-link></b-nav-item>
-        </b-nav>
-      </div>
     </div>
   </section>
 </template>
 
 <script>
+import homeNav from '@/layouts/partials/homeNav';
+
 import reactImage from '@/static/images/react.png';
 import cssImage from '@/static/images/css.png';
 import htmlImage from '@/static/images/html.png';
@@ -37,8 +40,14 @@ import vueImage from '@/static/images/vue.png';
 import javascriptImage from '@/static/images/javascript.png';
 import nodejsImage from '@/static/images/nodejs.png';
 
+import logoImage from '@/static/images/logov3.png';
+import landingBackgroundImage from '@/static/images/landing-background.png';
+
 
 export default {
+  components: {
+    homeNav
+  },
   data(){
     return{
       images: [
@@ -50,54 +59,64 @@ export default {
         vueImage,
         javascriptImage,
         nodejsImage,
-      ]
+      ],
+      logoImage,
+      landingBackgroundImage
       }
     }
   }
 </script>
 
 <style>
+
+  .home-page{
+    display: grid;
+  }
+
   .icon{
     height: 7em;
     width: 7em;
     padding: 1em;
   }
 
-  .jumbotron{
-    background: none;
-  }
-
-  .project-button{
-    justify-self: center;
-  }
-
   .projects-section{
-    display: grid;
-    margin-top: 4em;
+    position: absolute;
+    color: white;
+    margin-top: 6em;
+    font-size: 20px;
   }
+
   .project-link{
-    background-color: white;
-    color: rgb(0,219,146);
-    border: solid rgb(0,219,146); 
-    border-radius: 3px;
+    background-color: none;
+    color: white;
+    border: solid; 
+    /* border-radius: 3px; */
+    margin-top: 1em;
+    border-image: linear-gradient(to right, #6fa9df 0%, #7fe9f7 100%);
+    border-image-slice: 1;
   }
 
   .project-link:hover{
     transition: ease-in 0.3s;
     color: white;
-    background-color: rgb(0,219,146);
+    background-color: rgba(256, 256, 256, 0.2);
   }
 
-
-  /* .header-section{
-    background-color: rgb(204, 140, 140);
+  .hero-jumbo{
+    background: url('../static/images/landing-background.png') no-repeat center center;
+    /* background-repeat:no-repeat; */
+    background-size: cover;
+    /* background-position: 50% 70%; */
+    background-attachment: fixed;
+    position: relative;
+    padding: 13em;
+    margin-bottom: -1em;
   }
+
   .summary-section{
-    background-color: rgb(204, 204, 204)
+    margin-left: 7em;
+    margin-top: -1em;
+    margin-bottom: -4em;
   }
-  .projects-section{
-    background-color: rgb(150, 205, 140);
-  } */
-
 
 </style>

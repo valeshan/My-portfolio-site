@@ -1,24 +1,29 @@
 <template>
-  <section class="hero-image">
+  <section class="wallpaper">
     <b-container class="container project-container mw-100 (max-width: 100%;)">
       <b-jumbotron class="jumbo-header" header="Portfolio" lead="A few of my projects - 2018" >
       </b-jumbotron>
     </b-container>
+    
     <div class="row">
-      <div class="card col-md-5 mx-auto project" style="width: 18rem;" v-bind:key="index" v-for="(project, index) in projectInfo">
-          <img v-if="project.image" class="card-img-top" style="height: 20em" :src="project.image" alt="Card image cap">
-          <div class="card-body">
+      <div class="col-md-5 mx-auto project box" style="width: 18rem;" v-bind:key="index" v-for="(project, index) in projectInfo">
+          <img v-if="project.image" class="card-img-top box" style="height: 19em" :src="project.image" alt="Card image cap">
+          <div class="card-body" v-scroll="handleScroll">
             <h5 class="card-title">{{project.name}}</h5>
             <p class="card-text">{{project.text}}</p>
-            <ul class="row tools">
-              <li class="col-md-3 tool" :key="index" v-for="(tool, index) in project.tools">{{tool}}</li>
-            </ul>
-            <br>
+            <a v-b-toggle.toolcollapse class="btn link-btn" style="color: white">Tools</a>
+
+            <b-collapse id="toolcollapse"> 
+              <ul class="row tools">
+                <li class="col-md-3 tool" :key="index" v-for="(tool, index) in project.tools">{{tool}}</li>
+              </ul>
+            </b-collapse>
             <a v-if="project.href"  :href="project.href" class="btn link-btn" target="_blank">Live site</a>
             <a v-if="project.github"  :href="project.github" class="btn link-btn" target="_blank">Repo</a>
           </div>
       </div>
     </div>
+
   </section>
 </template>
 
@@ -40,6 +45,8 @@ export default {
         projectInfo
     }
   },
+  methods: {
+  }
 }
 </script>
 
@@ -49,6 +56,7 @@ export default {
   margin: 1em;
   padding-left: 0;
   padding-right: 0;
+  background-color: linear-gradient(to right, #6fa9df 0%, #7fe9f7 100%);
 }
 
 ul{
@@ -56,13 +64,14 @@ ul{
 }
 
 .tools{
+  margin-top: 20px;
   margin-left: -2.5em;
 }
 
 .tool{
   text-decoration: none;
   text-align: center;
-  color: rgb(0, 139, 219);
+  color: #27b188;
   background-color: white;
   border: solid white;
   padding: 3px;
@@ -73,7 +82,6 @@ ul{
 .link-btn{
   color: white;
   border: solid white;
-  margin-top: -1em;
 }
 
 .link-btn:hover{
@@ -92,10 +100,44 @@ ul{
 }
 
 .card-body{
-  background-color: rgb(0, 168, 219);
+  width: 613.5px;
+  margin-top: 0.5em;
+  background-image: linear-gradient(to right, #17c59a 0%, #2fd4da 100%);
+  background-position: bottom right;
+}
+
+#toolcollapse{
+  margin-top: 10px;
 }
 
 img{
   size: 250px;
+}
+
+@media screen and (max-width: 500px) {
+
+  .project{
+    padding: 0;
+  }
+
+  .card-text{
+    font-size: 15px;
+  }
+
+  .card-body, .card-img-top{
+    width: 22em;
+    margin-left: -33px;
+  }
+
+  .link-btn{
+    margin-top: -2em;
+    margin-bottom: -2em;
+  }
+}
+
+@media screen and (min-width: 501px){
+  .card-body{
+    width: auto;
+  }
 }
 </style>

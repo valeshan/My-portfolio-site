@@ -1,12 +1,14 @@
 <template>
-  <section class="hero-image"> 
-    <b-container class="about-container mw-100 (max-width: 100%;)">
-      <b-jumbotron class="jumbo-header" header="Valeshan Naidoo" lead="A little about myself and experiences" >
-      </b-jumbotron>
-    </b-container>
+  <section class="wallpaper"> 
+    <b-jumbotron class="about-jumbo text-center">
+        <img :src="logoImage" alt="logo" style="height: 10em" />
+        <div style="color: white; padding-top: 7em; margin-bottom: -7em">
+          <h3>About Me</h3>
+        </div>
+      </b-jumbotron> 
     <div class="container">
-      <hr class="center">
-      <img class="circle center" :src="image" alt="face">
+      <br>
+      <!-- <img class="circle center" :src="image" alt="face"> -->
       <div class="row link-group">
         <div class="mx-auto">
           <a :href="linkedin" target="_blank" class="profile-link">
@@ -17,9 +19,9 @@
           </a>  
         </div>
       </div>
-      <hr class="center">
+      <hr class="center" style="border-color:white;">
       <div class="row">
-        <div class="col-md-8  mx-auto">
+        <div class="col-md-8 paragraphs">
           <p v-bind:key="index" v-for="(paragraph, index) in aboutInfo">
             {{paragraph}}
           </p>   
@@ -34,6 +36,8 @@
 import aboutInfo from '@/static/aboutInfo.js';
 import linkedinImage from '@/static/images/linkedin.png';
 import githubImage from '@/static/images/github.png';
+
+import logoImage from '@/static/images/logov3.png';
 
 export default {
   head(){
@@ -53,12 +57,24 @@ export default {
       github: 'http://github.com/valeshan',
       linkedinImage,
       githubImage,
+      logoImage
     }
   }
 }
 </script>
 
 <style>
+  .about-jumbo{
+    background-image: url('../static/images/aboutCover.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    position: relative;
+    padding: 13em;
+    margin-bottom: -1em;
+  }
+
   .link-group{
     margin-top: 1.5em;
   }
@@ -82,5 +98,51 @@ export default {
   height: 130px; 
   }
 
+  .paragraphs{
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  @media screen and (max-width: 500px) {
+    .paragraphs{
+      width: 24em;
+      text-align: left;
+      margin-right: auto;
+      margin-left: 1em;
+      font-size: 15px;
+    }
+
+    .link-group{
+      margin-left: -11em;
+    }
+    hr{
+      display: none;
+    }
+    .center{
+      margin-left: 8em;
+    }
+  }
+
+  @media screen and (min-width: 501px) and(max-width: 1000px) {
+    .paragraphs{
+      width: 24em;
+      text-align: left;
+      margin-right: auto;
+      margin-left: auto;
+      font-size: 15px;
+    }
+
+    .link-group{
+      margin-left: -11em;
+    }
+
+    hr{
+      display: none;
+    }
+
+    .center{
+      margin-left: 8em;
+    }
+  }
 
 </style>

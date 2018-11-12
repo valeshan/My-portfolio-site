@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Nav/>
+    <Nav v-if="$route.name != 'index'" />
     <nuxt/>
     <Footer/>
   </div>
