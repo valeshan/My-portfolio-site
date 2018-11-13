@@ -119,11 +119,9 @@ export default {
     }
 
     .link-group{
-      margin-left: -8em;
+      margin-left: -7em;
     }
-    hr{
-      display: none;
-    }
+
     .center{
       margin-left: 8em;
     }

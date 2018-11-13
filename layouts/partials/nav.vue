@@ -9,9 +9,9 @@
 
         <b-navbar-nav class="ml-auto">
           <b-nav-item><nuxt-link to="/" >Home</nuxt-link></b-nav-item>
-          <b-nav-item><nuxt-link to="portfolio">Portfolio</nuxt-link></b-nav-item>
-          <b-nav-item><nuxt-link to="about">About</nuxt-link></b-nav-item>
-          <b-nav-item><nuxt-link to="contact">Contact</nuxt-link></b-nav-item>
+          <b-nav-item><nuxt-link v-b-toggle.nav_collapse  to="portfolio">Portfolio</nuxt-link></b-nav-item>
+          <b-nav-item><nuxt-link v-b-toggle.nav_collapse to="about">About</nuxt-link></b-nav-item>
+          <b-nav-item><nuxt-link v-b-toggle.nav_collapse  to="contact">Contact</nuxt-link></b-nav-item>
 
         </b-navbar-nav>
 
@@ -31,6 +31,12 @@ export default {
       logoImage,
       logoImage2,
       menuLogo,
+      click: false
+    }
+  },
+  methods:{
+    showdata: function(el){
+      console.log(this.data);
     }
   }
 }
@@ -38,6 +44,10 @@ export default {
 </script>
 
 <style>
+
+  .hide{
+    display: none;
+  }
 
   li{     
     list-style: none;
