@@ -30,4 +30,11 @@ export default {
     color: white;
     font-size: 0.9em;
   }
+
+  @media screen and (max-width: 500px) {
+    .footer{
+      height: auto;
+      padding: auto;
+    }
+  }
 </style>

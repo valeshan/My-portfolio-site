@@ -1,7 +1,7 @@
 <template>
   <section class="wallpaper home-page">
       <b-jumbotron class="hero-jumbo text-center">
-        <img :src="logoImage" alt="logo" style="height: 10em" fluid />
+          <img  class="mx-auto" :src="logoImage" alt="logo" style="height: 10em" fluid />
         <div style="color: white; padding-top: 1em;">
           <h3>Valeshan Naidoo</h3>
           <p>Full Stack Developer / Web Developer</p>
@@ -118,5 +118,25 @@ export default {
     margin-top: -1em;
     margin-bottom: -4em;
   }
+
+@media screen and (max-width: 500px) {
+  .hero-jumbo{
+    margin-left: -5em;
+  }
+  .projects-section{
+    margin-right: 8em;
+    margin-left: -7em;
+    font-size: 16px;
+  }
+  .summary-section{
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 1050px){
+  .projects-section{
+    margin-left: -10em;
+  }
+}
 
 </style>

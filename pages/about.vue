@@ -1,9 +1,11 @@
 <template>
-  <section class="wallpaper"> 
+  <section class="wallpaper about-page"> 
     <b-jumbotron class="about-jumbo text-center">
-        <img :src="logoImage" alt="logo" style="height: 10em" />
-        <div style="color: white; padding-top: 7em; margin-bottom: -7em">
-          <h3>About Me</h3>
+        <div class="jumbo-content">
+          <img :src="logoImage" alt="logo" style="height: 10em" />
+          <div style="color: white; padding-top: 7em; margin-bottom: -7em">
+            <h3>About Me</h3>
+          </div>
         </div>
       </b-jumbotron> 
     <div class="container">
@@ -64,6 +66,10 @@ export default {
 </script>
 
 <style>
+  .about-page{
+    display: grid;
+  }
+
   .about-jumbo{
     background-image: url('../static/images/aboutCover.jpg');
     background-repeat:no-repeat;
@@ -113,13 +119,17 @@ export default {
     }
 
     .link-group{
-      margin-left: -11em;
+      margin-left: -8em;
     }
     hr{
       display: none;
     }
     .center{
       margin-left: 8em;
+    }
+
+    .about-jumbo{
+      margin-left: -5em;
     }
   }
 

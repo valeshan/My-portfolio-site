@@ -12,7 +12,6 @@ import { setContext, getLocation, getRouteData } from './utils'
 
 /* Plugins */
 import nuxt_plugin_bootstrapvue_1de6be30 from 'nuxt_plugin_bootstrapvue_1de6be30' // Source: ./bootstrap-vue.js
-import nuxt_plugin_directives_521c0486 from 'nuxt_plugin_directives_521c0486' // Source: ../plugins/directives.js
 
 
 // Component: <no-ssr>
@@ -135,7 +134,6 @@ async function createApp (ssrContext) {
   // Plugin execution
   
   if (typeof nuxt_plugin_bootstrapvue_1de6be30 === 'function') await nuxt_plugin_bootstrapvue_1de6be30(app.context, inject)
-  if (typeof nuxt_plugin_directives_521c0486 === 'function') await nuxt_plugin_directives_521c0486(app.context, inject)
   
 
   // If server-side, wait for async component to be resolved first

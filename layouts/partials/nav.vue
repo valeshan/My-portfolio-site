@@ -1,16 +1,14 @@
 <template>
-  <header class="sticky-top navbar-nav">
-  <b-navbar toggleable="md" type="dark" style="width:100wh">
+  <b-navbar class="main-nav fixed-top" toggleable="md" type="dark" style="width:100wh;">
 
     <b-navbar-toggle target="nav_collapse"></b-navbar-toggle>
 
     <b-navbar-brand href="#"><b-nav-item><nuxt-link to="/"><img class="logo" :src="menuLogo" alt="logo" /></nuxt-link></b-nav-item></b-navbar-brand>
 
-      <b-collapse is-nav id="nav_collapse" >
+      <b-collapse is-nav id="nav_collapse" style="background: none;">
 
-        <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
-          <b-nav-item><nuxt-link to="/">Home</nuxt-link></b-nav-item>
+          <b-nav-item><nuxt-link to="/" >Home</nuxt-link></b-nav-item>
           <b-nav-item><nuxt-link to="portfolio">Portfolio</nuxt-link></b-nav-item>
           <b-nav-item><nuxt-link to="about">About</nuxt-link></b-nav-item>
           <b-nav-item><nuxt-link to="contact">Contact</nuxt-link></b-nav-item>
@@ -19,8 +17,6 @@
 
       </b-collapse>
   </b-navbar>
-  </header>
-
 </template>
 
 <script>
@@ -42,13 +38,6 @@ export default {
 </script>
 
 <style>
-  header{
-    background: rgb(0,219,146);
-    display: grid;
-    grid-template-columns: repeat(2,auto);
-    height: 4em;
-  }
-
 
   li{     
     list-style: none;
@@ -69,4 +58,9 @@ export default {
     color: white;
   }
 
+  @media screen and (min-width: 500px) {
+    .main-nav{
+      height: 4em;
+    }
+  }
 </style>

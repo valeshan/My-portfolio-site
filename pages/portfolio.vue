@@ -8,16 +8,16 @@
     <div class="row">
       <div class="col-md-5 mx-auto project box" style="width: 18rem;" v-bind:key="index" v-for="(project, index) in projectInfo">
           <img v-if="project.image" class="card-img-top box" style="height: 19em" :src="project.image" alt="Card image cap">
-          <div class="card-body" v-scroll="handleScroll">
+
+          <div class="card-body">
             <h5 class="card-title">{{project.name}}</h5>
             <p class="card-text">{{project.text}}</p>
-            <a v-b-toggle.toolcollapse class="btn link-btn" style="color: white">Tools</a>
+            <a @click="showTools(project)" class="btn link-btn" style="color: white">Tools</a>
 
-            <b-collapse id="toolcollapse"> 
-              <ul class="row tools">
+              <ul class="row tools" v-show="!project.isCollapsed">
                 <li class="col-md-3 tool" :key="index" v-for="(tool, index) in project.tools">{{tool}}</li>
               </ul>
-            </b-collapse>
+
             <a v-if="project.href"  :href="project.href" class="btn link-btn" target="_blank">Live site</a>
             <a v-if="project.github"  :href="project.github" class="btn link-btn" target="_blank">Repo</a>
           </div>
@@ -46,12 +46,18 @@ export default {
     }
   },
   methods: {
+    showTools: function(project){
+      project.isCollapsed = !project.isCollapsed;
+    }
   }
 }
 </script>
 
 <style>
 
+.project-container{
+  margin-top: 5em;
+}
 .project{
   margin: 1em;
   padding-left: 0;
@@ -101,7 +107,6 @@ ul{
 
 .card-body{
   width: 613.5px;
-  margin-top: 0.5em;
   background-image: linear-gradient(to right, #17c59a 0%, #2fd4da 100%);
   background-position: bottom right;
 }
