@@ -31,12 +31,6 @@ export default {
       logoImage,
       logoImage2,
       menuLogo,
-      click: false
-    }
-  },
-  methods:{
-    showdata: function(el){
-      console.log(this.data);
     }
   }
 }
@@ -44,10 +38,6 @@ export default {
 </script>
 
 <style>
-
-  .hide{
-    display: none;
-  }
 
   li{     
     list-style: none;
