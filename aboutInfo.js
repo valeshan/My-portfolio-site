@@ -1,0 +1,7 @@
+const aboutInfo = [
+  "After graduating in 2010 from Monash University with Bachelor's degree in Science, I started working at Telstra as a sales advisor (a Science degree is almost like an Arts degree), where I developed customer relations skills, solid experience with the customer journey and leadership skills (developed and led an in-home tech service for the store). Whilst working, I completed a Master's degree in Medical Radiations in 2014 which allowed me to gain experience in working with a multi-disciplinary team environment and understand complex logic structures.",
+  "After finishing my Master's, I decided that career wasn't for me and I created a startup with a few friends, YouStart. This gave me experience with networking, documentation, SCRUM methodology, leadership and very importantly, coding. I experimented with web design and WordPress (ran a startup blog), with HTML and CSS. While YouStart didn't take off, my passion for coding did.",
+  "Since early 2017, I made the decision to study coding full time, and am now a full stack JavaScript developer. I am continually learning new skills and frameworks. I see every task to be an opportunity to learn, this portfolio site itself has been an opportunity to become familiar with another framework, VueJS!"
+]
+
+module.exports = aboutInfo;
