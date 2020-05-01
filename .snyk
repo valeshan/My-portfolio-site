@@ -1,0 +1,48 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.14.1
+ignore: {}
+# patches apply the minimum changes required to fix a vulnerability
+patch:
+  SNYK-JS-LODASH-567746:
+    - nuxt > lodash:
+        patched: '2020-05-01T05:00:47.347Z'
+    - nuxt > @babel/core > lodash:
+        patched: '2020-05-01T05:00:47.347Z'
+    - nuxt > consola > lodash:
+        patched: '2020-05-01T05:00:47.347Z'
+    - nuxt > css-loader > lodash:
+        patched: '2020-05-01T05:00:47.347Z'
+    - nuxt > html-webpack-plugin > lodash:
+        patched: '2020-05-01T05:00:47.347Z'
+    - nuxt > webpack-bundle-analyzer > lodash:
+        patched: '2020-05-01T05:00:47.347Z'
+    - nuxt > webpackbar > lodash:
+        patched: '2020-05-01T05:00:47.347Z'
+    - bootstrap-vue > opencollective > inquirer > lodash:
+        patched: '2020-05-01T05:00:47.347Z'
+    - nuxt > @nuxtjs/babel-preset-app > @babel/core > lodash:
+        patched: '2020-05-01T05:00:47.347Z'
+    - nuxt > @nuxtjs/opencollective > consola > lodash:
+        patched: '2020-05-01T05:00:47.347Z'
+    - nuxt > webpackbar > consola > lodash:
+        patched: '2020-05-01T05:00:47.347Z'
+    - nuxt > optimize-css-assets-webpack-plugin > last-call-webpack-plugin > lodash:
+        patched: '2020-05-01T05:00:47.347Z'
+    - nuxt > thread-loader > async > lodash:
+        patched: '2020-05-01T05:00:47.347Z'
+    - nuxt > webpackbar > table > lodash:
+        patched: '2020-05-01T05:00:47.347Z'
+    - nuxt > @nuxtjs/babel-preset-app > @babel/preset-env > @babel/plugin-transform-block-scoping > lodash:
+        patched: '2020-05-01T05:00:47.347Z'
+    - nuxt > @nuxtjs/babel-preset-app > @babel/preset-env > @babel/plugin-transform-modules-umd > @babel/helper-module-transforms > lodash:
+        patched: '2020-05-01T05:00:47.347Z'
+    - nuxt > @nuxtjs/babel-preset-app > @babel/preset-env > @babel/plugin-transform-parameters > @babel/helper-call-delegate > @babel/traverse > lodash:
+        patched: '2020-05-01T05:00:47.347Z'
+    - nuxt > @nuxtjs/babel-preset-app > @babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > lodash:
+        patched: '2020-05-01T05:00:47.347Z'
+    - nuxt > @nuxtjs/babel-preset-app > @babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/generator > lodash:
+        patched: '2020-05-01T05:00:47.347Z'
+    - nuxt > @nuxtjs/babel-preset-app > @babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/helper-split-export-declaration > @babel/types > lodash:
+        patched: '2020-05-01T05:00:47.347Z'
+    - nuxt > @nuxtjs/babel-preset-app > @babel/preset-env > @babel/plugin-transform-exponentiation-operator > @babel/helper-builder-binary-assignment-operator-visitor > @babel/helper-explode-assignable-expression > @babel/traverse > @babel/helper-function-name > @babel/helper-get-function-arity > @babel/types > lodash:
+        patched: '2020-05-01T05:00:47.347Z'
