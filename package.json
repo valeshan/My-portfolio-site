@@ -13,7 +13,7 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "bootstrap-vue": "^2.0.0-rc.11",
+    "bootstrap-vue": "^2.0.0",
     "cross-env": "^5.2.0",
     "gsap": "^2.0.2",
     "nuxt": "^2.0.0",
